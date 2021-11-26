@@ -4,6 +4,7 @@ fi
 
 if [ ! -f "/etc/rc.local" ]; then
 echo "#!/bin/sh -e" > /etc/rc.local
+chmod 777 /etc/rc.local
 fi
 
 if [ `grep -c "/link/shell/init.sh" /etc/rc.local` -eq '0' ];then
