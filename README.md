@@ -41,3 +41,6 @@ SRT Liver Server, 默认占用UDP 8080端口
 推流地址 srt://ServerIP:8080?streamid=push/live/XXXX
 
 拉流地址 srt://ServerIP:8080?streamid=pull/live/XXXX
+
+## 服务配置
+修改/link/config目录下的配置文件即可
