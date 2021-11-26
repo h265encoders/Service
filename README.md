@@ -1,37 +1,39 @@
 # Service
 
-#### 介绍
+## 介绍
 LinkPi云服务相关免费软件的快速部署
+包含集成通信系统、frp、nginx-rtmp、sls，未来还会扩展更多常用流媒体服务软件。
 
-#### 软件架构
-软件架构说明
+## 运行环境
+ubuntu server 18.04
 
+## 安装教程
 
-#### 安装教程
+以root用户登陆你的服务器
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+```
+apt update
+apt install git
+git clone https://gitee.com/LinkPi/Service.git
+cd Service
+./install.sh
+reboot
+```
 
 
-#### 特技
+## 服务说明
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### Intercom
+集成通信服务端程序，默认占用UDP 7000端口
+
+#### frp
+内网穿透程序，默认占用TCP 7000端口
+
+#### nginx-rtmp
+rtmp服务端，默认占用TCP 1935端口
+推/拉流地址 rtmp://ServerIP/live/XXXX
+
+#### sls
+SRT Liver Server, 默认占用UDP 8080端口
+推流地址 srt://ServerIP:8080?streamid=push/live/XXXX
+拉流地址 srt://ServerIP:8080?streamid=pull/live/XXXX
