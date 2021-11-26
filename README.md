@@ -2,6 +2,7 @@
 
 ## 介绍
 LinkPi云服务相关免费软件的快速部署
+
 包含集成通信系统、frp、nginx-rtmp、sls，未来还会扩展更多常用流媒体服务软件。
 
 ## 运行环境
@@ -31,9 +32,12 @@ reboot
 
 #### nginx-rtmp
 rtmp服务端，默认占用TCP 1935端口
+
 推/拉流地址 rtmp://ServerIP/live/XXXX
 
 #### sls
 SRT Liver Server, 默认占用UDP 8080端口
+
 推流地址 srt://ServerIP:8080?streamid=push/live/XXXX
+
 拉流地址 srt://ServerIP:8080?streamid=pull/live/XXXX
